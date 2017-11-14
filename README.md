@@ -109,7 +109,7 @@ If using [ngrok](https://ngrok.com/) or [heroku](https://heroku.com) select the 
 
 ### Test
 
-Scroll down to the "Service Simulator" section, the check the Skill is talking to Alexa correcty enter the word help  _"help"_ then click "Ask Gee Music", and you'll ideally see some resulting JSON in the Service Response box. You can then try testing phrases like_"Play artist Arctic Monkeys"_
+Scroll down to the "Service Simulator" section, the check the Skill is talking to Alexa correcty enter the word help  _"help"_ then click "Ask Gee Music", and you'll ideally see some resulting JSON in the Service Response box. You can then try testing phrases like `Play artist Arctic Monkeys`
 
 ### Publishing Information, Privacy & Compliance
 
