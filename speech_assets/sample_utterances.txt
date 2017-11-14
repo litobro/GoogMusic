@@ -1,0 +1,16 @@
+GoogMusicPlaySongIntent Play the song {song_name}
+GoogMusicPlaySongIntent Play song {song_name}
+GoogMusicPlaySongIntent Play the song {song_name} by {artist_name}
+GoogMusicPlaySongIntent Play song {song_name} by {artist_name}
+GoogMusicPlaySongIntent Play {song_name}
+GoogMusicPlaySongIntent {song_name} by {artist_name}
+
+GoogMusicPlayArtistIntent Play the artist {artist_name}
+GoogMusicPlayArtistIntent Play artist {artist_name}
+GoogMusicPlayArtistIntent Play songs by {artist_name}
+GoogMusicPlayArtistIntent Play {artist_name} songs
+GoogMusicPlayArtistIntent Play music by {artist_name}
+
+GoogMusicPlayGenreRadioIntent Play {genre_name} radio
+GoogMusicPlayGenreRadioIntent Start radio for genre {genre_name}
+GoogMusicPlayGenreRadioIntent Start genre radio for {genre_name}

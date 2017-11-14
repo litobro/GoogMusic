@@ -1,5 +1,6 @@
 from builtins import object
 from gmusicapi import CallFailure, Mobileclient
+from fuzzywuzzy import fuzz, process
 
 class MusicManager(object):
     def __init__(self, client):
@@ -31,3 +32,11 @@ class MusicManager(object):
             return False
 
         return search[0]
+
+    def get_artist(self, name):
+        search = self._search('artist', name)
+
+        if len(search) == 0:
+            return False
+
+        return search[0]['artistId']

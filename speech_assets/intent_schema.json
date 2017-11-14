@@ -1,0 +1,41 @@
+{
+  "intents": [
+    {
+      "intent": "AMAZON.PauseIntent"
+    },
+    {
+      "intent": "AMAZON.ResumeIntent"
+    },
+    {
+      "slots": [
+        {
+          "name": "song_name",
+          "type": "AMAZON.MusicRecording"
+        },
+        {
+          "name": "artist_name",
+          "type": "AMAZON.MusicGroup"
+        }
+      ],
+      "intent": "GoogMusicPlaySongIntent"
+    },
+    {
+      "intent": "GoogMusicPlayArtistIntent",
+      "slots": [
+        {
+          "name": "artist_name",
+          "type": "AMAZON.MusicGroup"
+        }
+      ]
+    },
+    {
+      "slots": [
+        {
+          "name": "genre_name",
+          "type": "AMAZON.Genre"
+        }
+      ],
+      "intent": "GoogMusicPlayGenreRadioIntent"
+    }
+  ]
+}
