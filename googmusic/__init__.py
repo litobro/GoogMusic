@@ -16,6 +16,8 @@ if client.login(app.config['GOOGLE_EMAIL'], app.config['GOOGLE_PASSWORD'], app.c
 else:
     raise Exception('Login failed')
 
+music_queue = []
+
 from . import utils
 musicman = utils.musicmanager.MusicManager(client)
 

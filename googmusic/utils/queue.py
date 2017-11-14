@@ -1,0 +1,3 @@
+from builtins import object
+
+
