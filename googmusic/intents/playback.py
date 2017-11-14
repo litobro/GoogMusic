@@ -1,6 +1,10 @@
 from flask_ask import statement, audio
 from googmusic import ask, music_queue, client
 
+@ask.intent('AMAZON.CancelIntent')
+def cancel():
+    return audio().stop()
+
 @ask.intent("AMAZON.PauseIntent")
 def pause():
     return audio('Pausing').stop()
