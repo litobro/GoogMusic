@@ -27,7 +27,7 @@ class MusicQueue(object):
 
     def prev(self):
         if self._index <= 0 and self._loop:
-            self._index = len(self._queue)
+            self._index = len(self._queue) + 1
         if self._index is not None:
             self._index -= 1
             return self._queue[self._index]
