@@ -36,11 +36,11 @@ def play_artist(artist_name):
     if not top_tracks:
         return statement('I\'m sorry, I couldn\'t find that artist')
 
-    music_queue = []
+    music_queue.clear()
     for track in top_tracks:
-        music_queue.append(track)
+        music_queue.enqueue(track)
 
-    return audio('Playing top 25 tracks by %s' % artist_info['name']).play(client.get_stream_url(music_queue.pop(0)['nid']))
+    return audio('Playing top 25 tracks by %s' % artist_info['name']).play(client.get_stream_url(music_queue.current()['nid']))
 
 @ask.intent('GoogMusicPlayGenreRadioIntent')
 def play_genre_radio(genre_name):
@@ -58,9 +58,9 @@ def play_genre_radio(genre_name):
     station = client.create_station(genre_name, genre_id=g_id)
 
     tracks = client.get_station_tracks(station, num_tracks=50)
-    music_queue = []
+    music_queue.clear()
     for track in tracks:
-        music_queue.append(track)
-        print(track['nid'])
+        music_queue.enqueue(track)
+        #print(track['nid'])
 
-    return audio('You have selected %s radio' % str(g_id)).play(client.get_stream_url(music_queue.pop(0)['nid']))
+    return audio('You have selected %s radio' % str(g_id)).play(client.get_stream_url(music_queue.current()['nid']))

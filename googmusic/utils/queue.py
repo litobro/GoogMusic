@@ -8,13 +8,16 @@ class MusicQueue(object):
     def __init__(self):
         pass
 
+    def __len__(self):
+        return len(self._queue)
+
     def enqueue(self, track):
         if len(self._queue) == 0:
             self._index = 0
         self._queue.append(track)
 
     def next(self):
-        if len(self._queue) <= _index + 1:
+        if len(self._queue) >= self._index + 1:
             self._index += 1
             return self._queue[self._index]
         elif self._loop:
